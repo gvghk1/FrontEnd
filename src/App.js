@@ -8,7 +8,7 @@ import Home from './home/home';
 function App() {
   return (
     <div className="App">
-      <Home></Home>
+      <Home myText="WOW text through props"></Home>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
