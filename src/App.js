@@ -1,12 +1,16 @@
 import React from 'react';
 import Bookdetails from './components/Bookdetails/Bookdetails';
 import './App.css';
-const mongodb = require('mongodb');
-const express = require('express');
-
+const axios = require('axios');
+const url = 'https://geek-text-backend.herokuapp.com/api';
 class App extends React.Component {
-    state = {
-        bookdetails: [
+
+    constructor(props)
+  {
+    super(props);
+    this.state= {
+      bookdetails: 
+        [
             {
                 id: 1,
                 bookname: 'Courage Mountain',
@@ -29,12 +33,40 @@ class App extends React.Component {
                 book_rel: '9/12/2018',
                 bookRate: '5',
             }
-        ]
+        ],
+      FetchedAt: null
     }
+  }
 
     styling = {
         textAlign: "center",
+    };
+
+    componentDidMount(){
+        console.log("First Run")
+        this.getData();
+        console.log("Last Run")
     }
+
+    // componentWillMount()
+    // {
+    //     // Clear the interval right before component unmount
+    //     clearInterval(this.interval);
+    // }
+
+    async getData() 
+    {
+        console.log("Get Run")
+        try {
+          const response = await axios.get(url);
+          console.log(response)
+          console.log('hoping for data', response.data)
+          this.state.bookdetails = response.data
+          console.log("Set Run")
+        } catch (error) {
+          console.error(error);
+        }
+      }
 
     render() {
 
