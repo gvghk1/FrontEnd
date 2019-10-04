@@ -1,5 +1,5 @@
 import React from 'react';
-import Bookdetails from './components/Bookdetails';
+import Bookdetails from './components/Bookdetails/Bookdetails';
 import './App.css';
 
 class App extends React.Component {
@@ -29,11 +29,17 @@ class App extends React.Component {
        }
     ]
   }
+
+  styling = {
+      textAlign: "center",
+  }
   render(){
  
   return (
-    <div className="App">
-      <Bookdetails bookdetails = {this.state.bookdetails}/>
+    <div className="App" style={this.styling}>
+        <h1>GeekText</h1>
+        <p>Library</p>
+        <Bookdetails bookdetails = {this.state.bookdetails}/>
     </div>
   ); 
 }
