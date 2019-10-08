@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Navbar from "./Navbar";
 import home from "./home/home";
-import Cart from "./Cart";
+import Cart from "./components/Cart/Cart";
 
 class App extends React.Component {
   render() {

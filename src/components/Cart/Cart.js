@@ -1,11 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import {
-  addQuantity,
-  subtractQuantity,
-  removeItem
-} from "./components/actions/CartFunctions.js";
+import { addQuantity, subtractQuantity, removeItem } from "./CartFunctions.js";
+import missing_img from "./cover.png";
 
 class Cart extends Component {
   clickRemove = id => {
@@ -26,9 +23,9 @@ class Cart extends Component {
             <div className="container">
               <li className="collection-item avatar" key={item.id}>
                 <div className="item-details">
-                  <span className="title">{item.bookname}</span>
+                  <span className="title">Title: {item.book_name}</span>
                   <div className="item-img">
-                    <img src={item.img} alt={item.img} className="" />
+                    <img src={missing_img} alt={missing_img} className="" />
                   </div>
                   <div className="add-remove">
                     <p></p>
@@ -37,7 +34,7 @@ class Cart extends Component {
               </li>
               <ul className="right">
                 <li>
-                  <b>Price: ${item.price}</b>
+                  <b>Price: ${item.book_price}</b>
                 </li>
                 <li>
                   <span
@@ -72,9 +69,8 @@ class Cart extends Component {
                   </span>
                 </li>
               </ul>
-
               <ul className="center">
-                <b>{item.bookDescrip}</b>
+                <b>{item.book_desc}</b>
               </ul>
             </div>
           </div>

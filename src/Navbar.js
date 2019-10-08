@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 class Navbar extends React.Component {
   render() {
     return (
-      <div className="navbar">
+      <div style={{ background: "#39D1B4" }} className="navbar">
         <div className="container">
           <h1>GeekText</h1>
           <ul className="right">
