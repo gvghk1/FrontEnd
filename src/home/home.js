@@ -71,8 +71,6 @@ class home extends React.Component {
       const response = await axios.get(url);
       console.log(response);
       console.log("hoping for data", response.data);
-      this.state.bookdetails = response.data;
-      //here should change?
       this.setState({ bookdetails: response.data });
       console.log("Set Run");
     } catch (error) {

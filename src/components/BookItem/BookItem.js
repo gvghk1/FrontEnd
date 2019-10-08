@@ -23,7 +23,7 @@ export class Bookitem extends Component {
               " " +
               this.props.book.author_last_name}
           </p>
-          <i>Price: ${this.props.book.price} </i>
+          <i>Price: ${this.props.book.book_price} </i>
           <span
             className="clickAddButton"
             onClick={() => {
