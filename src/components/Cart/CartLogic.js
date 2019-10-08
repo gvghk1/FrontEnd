@@ -16,10 +16,9 @@ async function book_data() {
     const response = await axios.get(url);
     homeItems.items = response.data;
     this.setState({ items: response.data });
-  } catch (error) {
-    console.error(error);
-  }
+  } catch (error) {}
 }
+
 const CartLogic = (state = homeItems, action) => {
   if (action.type === ADD) {
     let addedItem = state.items.find(item => item.id === action.id);
