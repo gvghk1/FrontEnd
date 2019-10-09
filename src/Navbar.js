@@ -1,23 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Navbar.css";
 
 class Navbar extends React.Component {
   render() {
     return (
       <div style={{ background: "#39D1B4" }} className="navbar">
         <div className="container">
-          <h1>GeekText</h1>
-          <ul className="right">
-            <li>
+          <Link to="/">
+            <a href="#home" class="logo">
+              GeekText
+            </a>
+          </Link>
+          <ul className="downn" align="down">
+            <table class="myButton">
               <Link to="/">
-                <i href="#home">Home Link</i>
+                <a href="#home" class="links" type="button">
+                  Home
+                </a>
               </Link>
-            </li>
-            <li>
               <Link to="/cart">
-                <i href="#cart">Cart Link</i>
+                <a href="#cart" class="links" type="button">
+                  Cart
+                </a>
               </Link>
-            </li>
+            </table>
           </ul>
         </div>
       </div>
