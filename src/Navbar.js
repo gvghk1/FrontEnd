@@ -9,8 +9,8 @@ class Navbar extends React.Component {
         <ul className="left">
           For Testing Purposes
             <li>
-              <Link to="/cart">
-                <i href="#cart">Cart Link</i>
+              <Link to="/profile">
+                <i href="#profile">profile management</i>
               </Link>
             </li>
           </ul>
