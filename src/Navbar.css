@@ -1,0 +1,91 @@
+.linkbox {
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #666666;
+  font-family: Arial;
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+  padding: 6px 6px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+  width: 140%;
+  justify-content: space-between;
+  flex-direction: row;
+  position: relative;
+  right: 30px;
+  bottom: 3px;
+}
+.links {
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #666666;
+  font-family: Arial;
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+  padding: 6px 6px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+  width: 32%;
+}
+.links:hover {
+  background-color: #f6f6f6;
+  text-decoration: none;
+  color: #39d1b4;
+}
+
+.logo {
+  box-shadow: inset 0px 1px 0px 0px #39d1b4;
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #39d1b4;
+  display: inline-block;
+  cursor: pointer;
+  color: #35b69e;
+  font-family: Arial;
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+  padding: 1px 40px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #79dd5b;
+  position: relative;
+  bottom: 20px;
+  right: 20px;
+}
+
+.logo:hover {
+  background-color: #f6f6f6;
+  text-decoration: none;
+  color: #39d1b4;
+}
+.navbar {
+  height: 60px;
+  overflow: hidden;
+  background: "#39D1B4";
+  text-align: center;
+}
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
