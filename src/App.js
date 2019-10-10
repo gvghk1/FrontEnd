@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 import home from "./home/home";
 import Cart from "./components/Cart/Cart";
 import Registration from "./components/Registration(Profile Mgmt)/Registration";
+import BookInfo from "./components/Bookdetails/BookInfo.js";
 
 class App extends React.Component {
   render() {
@@ -14,9 +15,11 @@ class App extends React.Component {
           <Navbar />
           <Switch>
             <Route exact path="/" component={home} />
+            <Route path="/home" component={home} />
             <Route path="/cart" component={Cart} />
             {/* TODO PAUL HAS TO ADD HIS COMPONENT */}
             <Route path="/profile" component={Registration} />
+            <Route path="/details" component={BookInfo} />
           </Switch>
         </div>
       </BrowserRouter>

@@ -2,6 +2,7 @@ export const ADD = "ADD";
 export const REMOVE = "REMOVE";
 export const COUNT_UP = "COUNT_UP";
 export const COUNT_DOWN = "COUNT_DOWN";
+export const DETAILS = "DETAILS";
 
 const axios = require("axios");
 const url = "https://geek-text-backend.herokuapp.com/api";
@@ -9,6 +10,7 @@ const url = "https://geek-text-backend.herokuapp.com/api";
 var homeItems = {
   items: book_data(),
   addedItems: [],
+  addedItemID: [],
   total: 0
 };
 async function book_data() {
@@ -24,38 +26,23 @@ async function book_data() {
 function dbNotLoaded() {
   return [
     {
-      _id: "5d97808aeec2e9b7d414ce5a",
-      id: 33,
-      book_name: "Kind Hearts and Coronets",
-      book_cover: "http://dummyimage.com/350x350.png/ff4444/ffffff",
-      author_first_name: "Harvey",
-      author_last_name: "Inskipp",
-      author_biography:
-        "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
-      book_desc:
-        "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
-      book_genre: "Comedy|Drama",
-      book_publisher: "Eastern Milkpea",
-      book_releaseDate: "06/08/2019",
-      book_rating: 4,
-      email: "hinskippw@discuz.net",
-      gender: "Male",
-      book_publishing_info: "6/22/2019",
-      book_copies_sold: 95,
-      book_price: 39
-    },
-    {
-      id: 2,
-      bookname: "idk",
-      authorName: "person",
-      authorBio: "pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
-      bookDescrip:
-        "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
-      bookGenre: "Adventure|Children|Drama",
-      book_pub: "Dotted Hawthorn",
-      book_rel: "9/12/2018",
-      bookRate: "5",
-      book_price: 39
+      _id: "0",
+      id: 0,
+      book_name: "",
+      book_cover: "http://dummyimage.com/350x350.png/cc0000/ffffff",
+      author_first_name: "",
+      author_last_name: "",
+      author_biography: "",
+      book_desc: "",
+      book_genre: "",
+      book_publisher: "",
+      book_releaseDate: "",
+      book_rating: 0,
+      email: "",
+      gender: "",
+      book_publishing_info: "",
+      book_copies_sold: 0,
+      book_price: 0
     }
   ];
 }
@@ -120,6 +107,20 @@ const CartLogic = (state = homeItems, action) => {
       return {
         ...state,
         total: newTotal
+      };
+    }
+  }
+  if (action.type === DETAILS) {
+    let addedItem = state.items.find(item => item.id === action.id);
+    let existed_item = state.addedItemID.find(item => action.id === item.id);
+    if (existed_item) {
+      return {
+        ...state
+      };
+    } else {
+      return {
+        ...state,
+        addedItemID: [addedItem]
       };
     }
   } else {
