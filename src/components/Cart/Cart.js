@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { addQuantity, subtractQuantity, removeItem } from "./CartFunctions.js";
-import missing_img from "./cover.png";
+import "./Cart.css";
 
 class Cart extends Component {
   clickRemove = id => {
@@ -19,16 +19,21 @@ class Cart extends Component {
     let addedItems = this.props.items.length ? (
       this.props.items.map(item => {
         return (
-          <div className="card-body" key={item.id}>
+          <div className="slot" key={item.id}>
             <span className="card-title">Title: {item.book_name}</span>
-            <div className="item-img">
-              <img src={item.book_cover} alt={missing_img} className="" />
+            <div>
+              <img
+                src={item.book_cover}
+                alt="Girl in a jacket"
+                width="200"
+                height="200"
+                className="image"
+              />
             </div>
             <i className="card-subtitle mb-2 text-muted">{item.book_desc}</i>
-            <li>
+            <p>
               <b>Price: ${item.book_price}</b>
-            </li>
-            <li>
+              <br></br>
               <span
                 className="clickAdd"
                 onClick={() => {
@@ -59,7 +64,7 @@ class Cart extends Component {
               >
                 <button className="delete-button">Delete</button>
               </span>
-            </li>
+            </p>
           </div>
         );
       })
