@@ -80,4 +80,4 @@ const checkCartReducer = dispatch => {
 export default connect(
   mapStateToProps,
   checkCartReducer
-)(Bookitem);
+)(Bookitem); 
