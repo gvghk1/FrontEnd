@@ -1,10 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { addItem } from "../Cart/CartFunctions";
 
 export class Bookitem extends Component {
+  // style= {"width": "18rem"}
 
-    // style= {"width": "18rem"}
-    render() {
-        return (
+  clickOn = id => {
+    this.props.addItem(id);
+  };
 
   render() {
     return (
