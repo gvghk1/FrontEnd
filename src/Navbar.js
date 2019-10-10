@@ -6,6 +6,14 @@ class Navbar extends React.Component {
   render() {
     return (
       <div style={{ background: "#39D1B4" }} className="navbar">
+        <ul className="left">
+          For Testing Purposes
+          <li>
+            <Link to="/profile">
+              <i href="#profile">profile management</i>
+            </Link>
+          </li>
+        </ul>
         <div className="container">
           <Link to="/">
             <a href="#home" class="logo">

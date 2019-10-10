@@ -17,7 +17,7 @@ export class Bookitem extends Component {
           <br></br>
           <img
             src={this.props.book.book_cover}
-            alt="Girl in a jacket"
+            alt="bookcover placeholder"
             width="100"
             height="100"
           ></img>
