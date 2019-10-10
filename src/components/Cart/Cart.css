@@ -1,0 +1,11 @@
+.image {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  margin: 1px;
+  padding: 1px;
+}
+.slot {
+  background-color: rgba(174, 224, 205, 0.363);
+  color: rgb(0, 0, 0);
+  padding: 10px;
+}
