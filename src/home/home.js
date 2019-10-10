@@ -41,7 +41,8 @@ class home extends React.Component {
           bookGenre: "Adventure|Children|Drama",
           book_pub: "Dotted Hawthorn",
           book_rel: "9/12/2018",
-          bookRate: "5"
+          bookRate: "5",
+          book_price: 39
         }
       ],
       FetchedAt: null

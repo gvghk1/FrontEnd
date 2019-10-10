@@ -71,6 +71,8 @@
 .navbar {
   height: 60px;
   overflow: hidden;
+  background: "#39D1B4";
+  text-align: center;
 }
 .content {
   padding: 16px;
