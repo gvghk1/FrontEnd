@@ -12,19 +12,16 @@ class Navbar extends React.Component {
               GeekText
             </a>
           </Link>
-          <ul className="left">
-            For Testing Purposes
-            <li>
-              <Link to="/profile">
-                <i href="#profile">profile management</i>
-              </Link>
-            </li>
-          </ul>
-          <ul className="downn" align="down">
-            <table class="myButton">
+          <ul className="down" align="down">
+            <table class="linkbox">
               <Link to="/">
                 <a href="#home" class="links" type="button">
                   Home
+                </a>
+              </Link>
+              <Link to="/profile">
+                <a href="#cart" class="links" type="button">
+                  Profile
                 </a>
               </Link>
               <Link to="/cart">
