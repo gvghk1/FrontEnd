@@ -4,7 +4,7 @@ import "./App.css";
 import Navbar from "./Navbar";
 import home from "./home/home";
 import Cart from "./components/Cart/Cart";
-import Registration from "./components/Registration(Profile Mgmt)/Registration"
+import Registration from "./components/Registration(Profile Mgmt)/Registration";
 
 class App extends React.Component {
   render() {
