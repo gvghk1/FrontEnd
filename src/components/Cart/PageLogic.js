@@ -47,7 +47,7 @@ function dbNotLoaded() {
   ];
 }
 
-const CartLogic = (state = homeItems, action) => {
+const PageLogic = (state = homeItems, action) => {
   if (!Array.isArray(state.items) || !state.items.length) {
     state.items = dbNotLoaded();
   }
@@ -127,4 +127,4 @@ const CartLogic = (state = homeItems, action) => {
     return state;
   }
 };
-export default CartLogic;
+export default PageLogic;
