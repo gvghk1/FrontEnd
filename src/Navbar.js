@@ -12,20 +12,20 @@ class Navbar extends React.Component {
         class="navbar"
       >
         <div className="container">
-          <Link to="/">
+          <Link to="/home">
             <a href="#home" class="logo">
               GeekText
             </a>
           </Link>
           <ul className="down" align="down">
             <table class="linkbox">
-              <Link to="/">
+              <Link to="/home">
                 <a href="#home" class="links" type="button">
                   Home
                 </a>
               </Link>
               <Link to="/profile">
-                <a href="#cart" class="links" type="button">
+                <a href="#profile" class="links" type="button">
                   Profile
                 </a>
               </Link>

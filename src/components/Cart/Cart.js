@@ -24,7 +24,7 @@ class Cart extends Component {
             <div>
               <img
                 src={item.book_cover}
-                alt="Girl in a jacket"
+                alt="Failed to load: book_cover"
                 width="200"
                 height="200"
                 className="image"
@@ -71,7 +71,11 @@ class Cart extends Component {
     ) : (
       <div>
         <p>Your shopping cart is empty.</p>
-        <Link to="/#Items"> Shop Here</Link>
+        <Link to="/#Items">
+          <a href="#cart" class="links" type="button">
+            Shop Here
+          </a>
+        </Link>
       </div>
     );
     return (
