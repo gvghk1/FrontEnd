@@ -5,27 +5,22 @@ import "./Navbar.css";
 class Navbar extends React.Component {
   render() {
     return (
-      <div
-        style={{
-          background: "#39D1B4"
-        }}
-        class="navbar"
-      >
+      <div class="navbar">
         <div className="container">
-          <Link to="/">
+          <Link to="/home">
             <a href="#home" class="logo">
               GeekText
             </a>
           </Link>
           <ul className="down" align="down">
             <table class="linkbox">
-              <Link to="/">
+              <Link to="/home">
                 <a href="#home" class="links" type="button">
                   Home
                 </a>
               </Link>
               <Link to="/profile">
-                <a href="#cart" class="links" type="button">
+                <a href="#profile" class="links" type="button">
                   Profile
                 </a>
               </Link>
