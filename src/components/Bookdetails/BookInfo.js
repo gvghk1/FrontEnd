@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import {Ratingsystem} from "../Ratingsystem/Ratingsystem";
-
+import { Ratingsystem } from '../Ratingsystem/Ratingsystem'
 
 class BookInfo extends Component {
   clickRemove = id => {
@@ -29,7 +28,7 @@ class BookInfo extends Component {
               <b>Price: ${item.book_price}</b>
             </p>
 
-              <Ratingsystem></Ratingsystem>
+            <Ratingsystem></Ratingsystem>
 
             <Link to="/#Items">
               <a href="#cart" class="links" type="button">
