@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import { Ratingsystem } from '../Ratingsystem/Ratingsystem'
 
 class BookInfo extends Component {
   clickRemove = id => {
@@ -26,11 +27,15 @@ class BookInfo extends Component {
             <p>
               <b>Price: ${item.book_price}</b>
             </p>
+
+            <Ratingsystem></Ratingsystem>
+
             <Link to="/#Items">
               <a href="#cart" class="links" type="button">
                 Back to Home Page
               </a>
             </Link>
+            
           </div>
         );
       })

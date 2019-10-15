@@ -1,7 +1,7 @@
 import React from "react";
 
 
-class Registration extends React.Component {
+class Ratingsystem extends React.Component {
   render() {
     return (
       <div className="">
@@ -11,4 +11,4 @@ class Registration extends React.Component {
   }
 }
 
-export default Registration;
+export default Ratingsystem;
