@@ -16,22 +16,22 @@ export class Bookitem extends Component {
   };
   render() {
     return (
-      <div className="card">
-        <div className="card-body">
+        <div className="card">
+          <div className="card-body">
           <span
-            className="clickAddButton"
-            onClick={() => {
-              this.clickOnDetails(this.props.book.id);
-            }}
+              className="clickAddButton"
+              onClick={() => {
+                this.clickOnDetails(this.props.book.id);
+              }}
           >
             <Link to="/details">
               <a href="#tile" class="tile">
                 <h5 className="card-title">{this.props.book.book_name}</h5>
                 <img
-                  src={this.props.book.book_cover}
-                  alt="bookcover placeholder"
-                  width="100"
-                  height="100"
+                    src={this.props.book.book_cover}
+                    alt="bookcover placeholder"
+                    width="100"
+                    height="100"
                 ></img>
                 <br></br>
                 <br></br>
@@ -60,23 +60,23 @@ export class Bookitem extends Component {
                 <p className="card-text">
                   Author Name:{" "}
                   {this.props.book.author_first_name +
-                    " " +
-                    this.props.book.author_last_name}
+                  " " +
+                  this.props.book.author_last_name}
                 </p>
               </a>
             </Link>
           </span>
-          <i>Price: ${this.props.book.book_price} </i>
-          <span
-            className="clickAddButton"
-            onClick={() => {
-              this.clickOn(this.props.book.id);
-            }}
-          >
+            <i>Price: ${this.props.book.book_price} </i>
+            <span
+                className="clickAddButton"
+                onClick={() => {
+                  this.clickOn(this.props.book.id);
+                }}
+            >
             <button className="addButton">Add</button>
           </span>
+          </div>
         </div>
-      </div>
     );
   }
 }
@@ -98,6 +98,6 @@ const checkCartReducer = dispatch => {
 };
 
 export default connect(
-  mapStateToProps,
-  checkCartReducer
+    mapStateToProps,
+    checkCartReducer
 )(Bookitem);
