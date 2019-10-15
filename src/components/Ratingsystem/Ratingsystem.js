@@ -1,7 +1,7 @@
 import React from "react";
 
-
-class Ratingsystem extends React.Component {
+//Todo Figure out why `export default Ratingsystem;` does not work
+export class Ratingsystem extends React.Component {
   render() {
     return (
       <div className="">
@@ -10,5 +10,3 @@ class Ratingsystem extends React.Component {
     );
   }
 }
-
-export default Ratingsystem;
