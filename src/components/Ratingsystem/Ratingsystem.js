@@ -5,7 +5,7 @@ export class Ratingsystem extends React.Component {
   render() {
     return (
       <div className="">
-        <h1>Eric's Workspace - Martyn</h1>
+        <h1>Rating System - Eric's Workspace</h1>
       </div>
     );
   }
