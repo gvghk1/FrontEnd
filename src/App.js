@@ -17,7 +17,6 @@ class App extends React.Component {
             <Route exact path="/" component={home} />
             <Route path="/home" component={home} />
             <Route path="/cart" component={Cart} />
-            {/* TODO PAUL HAS TO ADD HIS COMPONENT */}
             <Route path="/profile" component={Registration} />
             <Route path="/details" component={BookInfo} />
           </Switch>
