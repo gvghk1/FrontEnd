@@ -4,13 +4,13 @@
   display: inline;
   cursor: pointer;
   color: #0d312b;
-  font-family: Arial, serif;
+  font-family: Arial, fantasy;
   font-size: 15px;
   text-align: center;
   font-weight: bold;
   padding: 1px 40px;
   position: relative;
-  width: 25%;
+  width: 100%;
 }
 .tile:hover {
   background-color: #f6f6f6;
