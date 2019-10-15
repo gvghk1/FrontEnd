@@ -1,6 +1,7 @@
 import React from "react";
 import "./home.css";
 import Bookdetails from "../components/Bookdetails/Bookdetails";
+import Filter from "../components/Filter/Filter";
 
 const axios = require("axios");
 const url = "https://geek-text-backend.herokuapp.com/api";
@@ -68,6 +69,7 @@ class home extends React.Component {
     return (
       <div className="App" style={this.styling}>
         <h4>Books for Sale</h4>
+        <Filter></Filter>
         <Bookdetails bookdetails={this.state.bookdetails} />
       </div>
     );
