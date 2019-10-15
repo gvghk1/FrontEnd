@@ -4,7 +4,7 @@ import Bookitem from "../BookItem/BookItem";
 class Bookdetails extends React.Component {
   render() {
     return this.props.bookdetails.map(book => (
-      <div className="App">
+      <div className="bookitem">
         <Bookitem key={book.id} book={book} />
       </div>
     ));
