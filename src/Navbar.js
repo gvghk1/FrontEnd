@@ -21,7 +21,7 @@ class Navbar extends React.Component {
               </Link>
               <Link to="/profile">
                 <a href="#profile" class="links" type="button">
-                  Profile
+                  Registration
                 </a>
               </Link>
               <Link to="/cart">

@@ -5,7 +5,7 @@ class Registration extends React.Component {
   render() {
     return (
       <div className="">
-        <h1>Paul's Workspace - Martyn</h1>
+        <h1>Registration - Paul's Workspace</h1>
       </div>
     );
   }
