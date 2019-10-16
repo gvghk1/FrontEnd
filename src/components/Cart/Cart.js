@@ -62,7 +62,7 @@ class Cart extends Component {
                   this.clickRemove(item.id);
                 }}
               >
-                <button className="delete-button">Delete</button>
+                <button className="del-button">Delete</button>
               </span>
             </p>
           </div>
