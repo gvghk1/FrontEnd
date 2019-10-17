@@ -28,6 +28,11 @@ class Navbar extends React.Component {
                 Cart
               </span>
             </Link>
+            <Link to="/list">
+              <span href="#list" className="links" type="button">
+                Wishlist
+              </span>
+            </Link>
           </div>
         </div>
       </div>
