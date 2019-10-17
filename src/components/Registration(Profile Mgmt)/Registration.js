@@ -24,8 +24,9 @@ class Registration extends React.Component {
             Login Credentials: <br/>
             Login ID: <input type="text" id="LoginID" required/> <br/>
             Password: <input type="text" id="Password" required/> <br/>
-            Confirm Password: <input type="text" id="ConfirmPassword" required/> <br/> </br/>
-
+            Confirm Password: <input type="text" id="ConfirmPassword" required/>
+              <br/>
+              <br/>
             Personal Information: <br/>
             Name: <input type="text" id="Name" required/> <br/>
             Nickname (for commenting and rating): <input type="text" id="Nickname" required/> <br/>
@@ -41,7 +42,7 @@ class Registration extends React.Component {
             Exp Date (MM/YYYY): <input type="text" id="cc_month" required/> /
                         <input type="text" id="cc_year" required/> <br/>
             CVV: <input type="text" id="cc_cvv" required/> <br/> <br/>
-            <input type = "submit" value="Submit" onclick = "check_entries();"/>
+            <input type = "submit" value="Submit" onClick = "check_entries();"/>
         </form>
       </div>
     );
