@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { addItem } from "../Cart/CartFunctions";
 import { addItemDetails } from "./BookFunctions";
+import { addItemWish } from "../wishlist/WishlistFunctions";
 import { Link } from "react-router-dom";
 import "./BookItem.css";
 
@@ -13,6 +14,9 @@ export class Bookitem extends Component {
   };
   clickOnDetails = id => {
     this.props.addItemDetails(id);
+  };
+  clickOnWish = id => {
+    this.props.addItemWish(id);
   };
   render() {
     return (
@@ -77,6 +81,16 @@ export class Bookitem extends Component {
               Add
             </button>
           </span>
+          <span
+            className="clickAddWish"
+            onClick={() => {
+              this.clickOnWish(this.props.book.id);
+            }}
+          >
+            <button className="wish-button" type="button">
+              Add to Wishlist
+            </button>
+          </span>
         </div>
       </div>
     );
@@ -95,6 +109,9 @@ const checkCartReducer = dispatch => {
     },
     addItemDetails: id => {
       dispatch(addItemDetails(id));
+    },
+    addItemWish: id => {
+      dispatch(addItemWish(id));
     }
   };
 };

@@ -6,6 +6,8 @@ export const DETAILS = "DETAILS";
 export const SAVE_ADD = "SAVE_ADD";
 export const SAVE_ADD_CART = "SAVE_ADD_CART";
 export const SAVE_REMOVE = "SAVE_REMOVE";
+export const WISH_LIST_ADD = "WISH_LIST_ADD";
+export const WISH_LIST_REMOVE = "WISH_LIST_REMOVE";
 
 const axios = require("axios");
 const url = "https://geek-text-backend.herokuapp.com/api";
@@ -15,6 +17,7 @@ var homeItems = {
   addedItems: [],
   addedItemID: [],
   savedItems: [],
+  wishlist: [],
   total: 0
 };
 async function book_data() {
@@ -171,6 +174,25 @@ const PageLogic = (state = homeItems, action) => {
     return {
       ...state,
       savedItems: new_items
+    };
+  }
+  if (action.type === WISH_LIST_ADD) {
+    let addedItem = state.items.find(item => item.id === action.id);
+    let existed_item = state.wishlist.find(item => action.id === item.id);
+    if (existed_item) {
+      return state;
+    } else {
+      return {
+        ...state,
+        wishlist: [...state.wishlist, addedItem]
+      };
+    }
+  }
+  if (action.type === WISH_LIST_REMOVE) {
+    let new_items = state.wishlist.filter(item => action.id !== item.id);
+    return {
+      ...state,
+      wishlist: new_items
     };
   } else {
     return state;

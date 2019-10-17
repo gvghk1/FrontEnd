@@ -17,7 +17,7 @@
   justify-content: space-between;
   flex-direction: row;
   position: absolute;
-  width: 325px;
+  width: 425px;
   right: 10%;
   top: 10%;
 }
@@ -36,7 +36,7 @@
   padding: 6px 6px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
-  width: 32%;
+  width: 25%;
 }
 .links:hover {
   background-color: #f6f6f6;

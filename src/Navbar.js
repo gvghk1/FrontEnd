@@ -23,14 +23,14 @@ class Navbar extends React.Component {
                 Registration
               </span>
             </Link>
-            <Link to="/cart">
-              <span href="#cart" className="links" type="button">
-                Cart
-              </span>
-            </Link>
             <Link to="/list">
               <span href="#list" className="links" type="button">
                 Wishlist
+              </span>
+            </Link>
+            <Link to="/cart">
+              <span href="#cart" className="links" type="button">
+                Cart
               </span>
             </Link>
           </div>
