@@ -3,6 +3,9 @@ export const REMOVE = "REMOVE";
 export const COUNT_UP = "COUNT_UP";
 export const COUNT_DOWN = "COUNT_DOWN";
 export const DETAILS = "DETAILS";
+export const SAVE_ADD = "SAVE_ADD";
+export const SAVE_ADD_CART = "SAVE_ADD_CART";
+export const SAVE_REMOVE = "SAVE_REMOVE";
 
 const axios = require("axios");
 const url = "https://geek-text-backend.herokuapp.com/api";
@@ -11,6 +14,7 @@ var homeItems = {
   items: book_data(),
   addedItems: [],
   addedItemID: [],
+  savedItems: [],
   total: 0
 };
 async function book_data() {
@@ -28,7 +32,7 @@ function dbNotLoaded() {
     {
       _id: "0",
       id: 0,
-      book_name: "",
+      book_name: "Loading...",
       book_cover: "http://dummyimage.com/350x350.png/cc0000/ffffff",
       author_first_name: "",
       author_last_name: "",
@@ -42,7 +46,8 @@ function dbNotLoaded() {
       gender: "",
       book_publishing_info: "",
       book_copies_sold: 0,
-      book_price: 0
+      book_price: 0,
+      quantity: 0
     }
   ];
 }
@@ -50,6 +55,20 @@ function dbNotLoaded() {
 const PageLogic = (state = homeItems, action) => {
   if (!Array.isArray(state.items) || !state.items.length) {
     state.items = dbNotLoaded();
+  }
+  if (action.type === DETAILS) {
+    let addedItem = state.items.find(item => item.id === action.id);
+    let existed_item = state.addedItemID.find(item => action.id === item.id);
+    if (existed_item) {
+      return {
+        ...state
+      };
+    } else {
+      return {
+        ...state,
+        addedItemID: [addedItem]
+      };
+    }
   }
   if (action.type === ADD) {
     let addedItem = state.items.find(item => item.id === action.id);
@@ -110,19 +129,49 @@ const PageLogic = (state = homeItems, action) => {
       };
     }
   }
-  if (action.type === DETAILS) {
+  if (action.type === SAVE_ADD) {
     let addedItem = state.items.find(item => item.id === action.id);
-    let existed_item = state.addedItemID.find(item => action.id === item.id);
+    let existed_item = state.savedItems.find(item => action.id === item.id);
+    let new_items = state.addedItems.filter(item => action.id !== item.id);
+    let itemToRemove = state.addedItems.find(item => action.id === item.id);
+    let newTotal =
+      state.total - itemToRemove.book_price * itemToRemove.quantity;
     if (existed_item) {
-      return {
-        ...state
-      };
+      return state;
     } else {
       return {
         ...state,
-        addedItemID: [addedItem]
+        addedItems: new_items,
+        savedItems: [...state.savedItems, addedItem],
+        total: newTotal
       };
     }
+  }
+  if (action.type === SAVE_ADD_CART) {
+    let addedItem = state.items.find(item => item.id === action.id);
+    let existed_item = state.addedItems.find(item => action.id === item.id);
+    let new_items = state.savedItems.filter(item => action.id !== item.id);
+
+    let itemToRemove = state.savedItems.find(item => action.id === item.id);
+    let newTotal =
+      state.total + itemToRemove.book_price * itemToRemove.quantity;
+    if (existed_item) {
+      return state;
+    } else {
+      return {
+        ...state,
+        addedItems: [...state.addedItems, addedItem],
+        savedItems: new_items,
+        total: newTotal
+      };
+    }
+  }
+  if (action.type === SAVE_REMOVE) {
+    let new_items = state.savedItems.filter(item => action.id !== item.id);
+    return {
+      ...state,
+      savedItems: new_items
+    };
   } else {
     return state;
   }

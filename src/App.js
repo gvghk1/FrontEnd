@@ -11,7 +11,7 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="App" class="html">
+        <div className="App">
           <Navbar />
           <Switch>
             <Route exact path="/" component={home} />
