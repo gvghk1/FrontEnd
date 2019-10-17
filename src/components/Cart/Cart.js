@@ -111,6 +111,11 @@ class Cart extends Component {
     ) : (
       <div>
         <p>Your shopping cart is empty.</p>
+        <Link to="/#Items">
+          <span href="#cart" className="links" type="button">
+            Shop Here
+          </span>
+        </Link>
       </div>
     );
 
@@ -162,34 +167,6 @@ class Cart extends Component {
     ) : (
       <div>
         <p>Your list is empty.</p>
-      </div>
-    );
-    let recipt = this.props.items.length ? (
-      this.props.items.map(item => {
-        return (
-          <div class="shopping-cart" key={item.id}>
-            <div class="item">
-              <div class="description">
-                <span className="card-title">
-                  <b>{item.book_name}</b>
-                </span>
-              </div>
-              <div class="buttons">
-                <div class="item-price">
-                  <h5>${item.book_price * item.quantity}</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        );
-      })
-    ) : (
-      <div>
-        <Link to="/#Items">
-          <span href="#cart" className="links" type="button">
-            Shop Here
-          </span>
-        </Link>
       </div>
     );
 
