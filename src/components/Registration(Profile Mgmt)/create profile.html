@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>JavaScript</title>
+    <title>Account Creation Page</title>
     <script type="text/javascript">
-        function check_entries(){
-           var loginid = document.getElementByID("LoginID");
+        function check_entries(input, cc_num){
+           /* var loginid = document.getElementByID("LoginID");
            var pw = document.getElementByID("Password");
            var cfrmpw = document.getElementByID("ConfirmPassword");
            var name = document.getElementByID("Name");
@@ -15,38 +15,92 @@
            var addrLine1 = document.getElementByID("AddressLine1");
            var city = document.getElementByID("City");
            var state = document.getElementByID("State");
-           var zip = document.getElementByID("ZIPCode");
-
+           var zip = document.getElementByID("ZIPCode"); */
+           var desired_pswd = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+           if (!input.value.match(desired_pswd)) {
+               alert("Password does not meet criteria! Try again.")
+               return false;
+           }
+           var desired_ccnum = /^(?=.*[0-9])/;
+           if (!cc_num.value.match(desired_ccnum)) {
+                alert("Invalid credit card number. Should only contain numbers!")
+                return false;
+           }
+           
            // insert form validation here
         }
     </script>
 </head>
 
 <body>
-    <form>
+    <form name = "form1" onsubmit="return check_entries(input, cc_num)">
         Welcome to the Account Creation page. Here, you will create your account. <br/>
-        Enter the following: <br/> <br/> 
-        Login Credentials: <br/>
+        <a href="file:///C:/Users/Paul/Desktop/Sample/LoginPage.html">Already have an account? Click here to login.</a> <br/>
+        Enter the following to proceed: <br/> <br/>
+        <div class = "form-header">
+            <h4 class = "title">Login Credentials</h4>
+        </div>
         Login ID: <input type="text" id="LoginID" required/> <br/>
         Password: <input type="text" id="Password" required/> <br/>
-        Confirm Password: <input type="text" id="ConfirmPassword" required/> <br/> </br/>
+        (Password must be 6-20 characters, and contain at least one lowercase letter, uppercase letter, and a number 0-9)<br/>
+        <!--Confirm Password: <input type="text" id="ConfirmPassword" required/> <br/> </br/>-->
 
-        Personal Information: <br/>
+    
+        <div class = "form-header">
+                <h4 class = "title">Personal Information</h4>
+        </div>
         Name: <input type="text" id="Name" required/> <br/>
         Nickname (for commenting and rating): <input type="text" id="Nickname" required/> <br/>
         E-mail Address: <input type="text" id="email" required/> <br/>
-        Home/Street Address: <br/>
+        
+        <div class = "form-header">
+            <h4 class = "title">Shipping/Home Address</h4>
+            (You will be able to add more addresses once your account has been created) <br/>
+        </div>
         Unit Number and Street: <input type="text" id="AddressLine1" required/> <br/>
         City: <input type="text" id="City" required/> <br/>
-        State (2 letters-abbreviation): <input type="text" id="State" required/> <br/>
+        State (2 letter-abbreviation): <input type="text" id="State" required/> <br/>
         ZIP Code: <input type="text" id="ZIPCode" required/> <br/> <br/>
-        Credit Card Information: <br/> 
-        Card Type (VISA, AmEx, etc): <input type="text" id="cc_type" required/> <br/>
+    
+        <div class = "form-header">
+            <h4 class = "title">Credit Card Detail</h4>
+            (You will be able to add more credit cards once your account has been created) <br/>
+        </div>
         Card # (no spaces or dashes): <input type="text" id="cc_number" required/> <br/>
-        Exp Date (MM/YYYY): <input type="text" id="cc_month" required/> /
-                    <input type="text" id="cc_year" required/> <br/>
+        Exp Date (MM/YYYY): 
+        <div class="date-field">
+            <div class="month">
+                Month <select name="Month">
+                    <option value="january">01</option>
+                    <option value="february">02</option>
+                    <option value="march">03</option>
+                    <option value="april">04</option>
+                    <option value="may">05</option>
+                    <option value="june">06</option>
+                    <option value="july">07</option>
+                    <option value="august">08</option>
+                    <option value="september">09</option>
+                    <option value="october">10</option>
+                    <option value="november">11</option>
+                    <option value="december">12</option>
+                </select>
+            </div>
+            <div class="year">
+                Year <select name="Year">
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                </select>
+            </div>
+        </div>
         CVV: <input type="text" id="cc_cvv" required/> <br/> <br/>
-        <input type = "submit" value="Submit" onclick = "check_entries();"/>
+    
+        <input type = "submit" value="Submit" onclick="check_entries(document.form1.Password, document.form1.cc_number);"/>
     </form>
 </body>
 
