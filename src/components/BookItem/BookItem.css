@@ -18,3 +18,47 @@
   text-shadow: 0px 1px 0px #cccbcb;
   color: #1a6355;
 }
+.add-button {
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #666666;
+  font-family: Arial;
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+  padding: 6px 6px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+}
+
+.add-button:hover {
+  background-color: #f6f6f6;
+  text-decoration: none;
+  color: #39d1b4;
+}
+.wish-button {
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #666666;
+  font-family: Arial;
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+  padding: 6px 6px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+}
+
+.wish-button:hover {
+  background-color: #f6f6f6;
+  text-decoration: none;
+  color: #4839d1;
+}

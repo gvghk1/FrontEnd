@@ -8,29 +8,32 @@ class Navbar extends React.Component {
       <div className="navbar">
         <div className="container">
           <Link to="/home">
-            <a href="#home" className="logo">
+            <span href="#home" className="logo">
               GeekText
-            </a>
+            </span>
           </Link>
-          <ul className="down" align="down">
-            <table className="linkbox">
-              <Link to="/home">
-                <a href="#home" class="links" type="button">
-                  Home
-                </a>
-              </Link>
-              <Link to="/profile">
-                <a href="#profile" className="links" type="button">
-                  Registration
-                </a>
-              </Link>
-              <Link to="/cart">
-                <a href="#cart" className="links" type="button">
-                  Cart
-                </a>
-              </Link>
-            </table>
-          </ul>
+          <div className="linkbox" align="down">
+            <Link to="/home">
+              <span href="#home" className="links" type="button">
+                Home
+              </span>
+            </Link>
+            <Link to="/profile">
+              <span href="#profile" className="links" type="button">
+                Registration
+              </span>
+            </Link>
+            <Link to="/list">
+              <span href="#list" className="links" type="button">
+                Wishlist
+              </span>
+            </Link>
+            <Link to="/cart">
+              <span href="#cart" className="links" type="button">
+                Cart
+              </span>
+            </Link>
+          </div>
         </div>
       </div>
     );

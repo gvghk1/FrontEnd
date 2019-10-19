@@ -14,7 +14,7 @@ class home extends React.Component {
         {
           _id: "0",
           id: 0,
-          book_name: "",
+          book_name: "Loading...",
           book_cover: "http://dummyimage.com/350x350.png/cc0000/ffffff",
           author_first_name: "",
           author_last_name: "",
@@ -28,7 +28,8 @@ class home extends React.Component {
           gender: "",
           book_publishing_info: "",
           book_copies_sold: 0,
-          book_price: 0
+          book_price: 0,
+          quantity: 0
         }
       ],
       FetchedAt: null
