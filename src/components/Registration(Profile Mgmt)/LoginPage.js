@@ -12,7 +12,7 @@ class Registration extends React.Component {
             <form>
                 Login ID: <input type="text" id="LoginID" required/> <br/>
                 Password: <input type="text" id="Password" required/> <br/>
-                <input type = "submit" value="Submit">
+                <input type = "submit" value="Submit"></input>
             </form>
 
             <a href="file:///C:/Users/Paul/Desktop/Sample/create%20profile.html?Month=january&Year=2019">Don't have an account? Click here to create one.</a>

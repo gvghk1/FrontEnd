@@ -39,7 +39,7 @@ class Registration extends React.Component {
           Login ID: <input type="text" id="LoginID" required/> <br/>
           Password: <input type="text" id="Password" required/> <br/>
           (Password must be 6-20 characters, and contain at least one lowercase letter, uppercase letter, and a number 0-9)<br/>
-          <!--Confirm Password: <input type="text" id="ConfirmPassword" required/> <br/> </br/>-->
+          {/* <!--Confirm Password: <input type="text" id="ConfirmPassword" required/> <br/> </br/>--> */}
 
       
           <div class = "form-header">
