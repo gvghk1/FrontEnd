@@ -1,0 +1,131 @@
+.tile {
+  box-shadow: inset 0px 1px 0px 0px #39d1b4;
+  background-color: #ffffff;
+  display: inline-block;
+  cursor: pointer;
+  color: #0d312b;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 1px 40px;
+  position: relative;
+  width: 90%;
+  text-align: left;
+}
+
+.author {
+  font-size: 100%;
+  text-align: left;
+  position: relative;
+  bottom: 10px;
+  top: 0.3px;
+}
+.tile:hover {
+  background-color: #f6f6f6;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #cccbcb;
+  color: #1a6355;
+}
+.book_cover {
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  cursor: pointer;
+  padding: 6px 6px;
+}
+
+
+.book_title {
+  font-weight: normal;
+  font-size: 20px;
+  text-align: left;
+  color: #000000;
+  bottom: 10px;
+}
+.released {
+  display: inline;
+  font-weight: normal;
+  color: #808080;
+}
+.book_details {
+  margin-top: 2%;
+}
+.publish {
+  font-size: 12px;
+}
+.details {
+  margin-right: 5%;
+  margin-left: 3%;
+  margin-top: 1%;
+  width: auto;
+}
+.home-page-list {
+  position: relative;
+}
+.add-button {
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #666666;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 6px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+}
+
+.add-button:hover {
+  background-color: #f6f6f6;
+  text-decoration: none;
+  color: #39d1b4;
+}
+.wish-button {
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #666666;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 6px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+}
+
+.wish-button:hover {
+  background-color: #f6f6f6;
+  text-decoration: none;
+  color: #4839d1;
+}
+
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.popup_inner {
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 25%;
+  bottom: 65%;
+  margin: auto;
+  border-radius: 20px;
+  background: white;
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+}

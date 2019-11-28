@@ -1,0 +1,9 @@
+.alert {
+  width: 75%;
+  margin: auto;
+}
+
+.filter-number {
+  text-align: center;
+  color: rgb(6, 54, 4);
+}
